@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0">
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+		<title>Custom Keyboard Set</title>
+		<style>
+			body {
+				font-family:'Open Sans', Lato, sans-serif;
+			}  		  
+		</style>
+	</head>
+	<body>
+		<div id="keyboard">
+			<nav-bar></nav-bar>
+			<keyboard-customizer :change-keyboard='changeKeyboard' :keyboard-options='keyboardOptions' :keyboard='keyboard' :select-color='selectColor' :colors='colors' :undo='undoChange' :redo='redoChange' :set-color-all='setColorAll' :upload='uploadKeyboard'></keyboard-customizer>
+			<keyboard-product-info></keyboard-product-info>
+		</div>
+	</body>
+</html>

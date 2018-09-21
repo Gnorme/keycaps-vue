@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+	<script src="https://js.stripe.com/v3/"></script>
+	<script src="https://checkout.stripe.com/checkout.js"></script>
+    <title>Cart</title>
+    <style>
+		body {
+			font-family:'Open Sans', Lato, sans-serif;
+		}
+		#cart-container {
+			margin-right: auto;
+			margin-left:auto;
+			width:100%;	
+			max-width: 1140px;
+		}		
+		.button {
+			background: #1574cd;
+			border-radius: 2px;
+			font-weight:300;
+			color: white;
+			border:none;
+			font-family: 'Open Sans', sans-serif;
+			padding:7px 20px;
+			font-size:16px;
+			box-shadow: 1px 1px 5px rgba(0,0,0,0.3);
+			display:inline-block;
+			cursor: pointer;
+		}
+		#customButton {
+			margin-top:8px;
+			float:right;
+		}
+		.disabled {
+			opacity:0.2;
+			background-color: grey;
+			cursor: not-allowed;
+		}				
+	</style>
+  </head>
+  <body>
+  	<div id="cart">
+  		<nav-bar></nav-bar>
+  		<div id="cart-container">
+		  	<cart :products="products" :remove-item="removeItem"></cart>
+		  	<shipping :stringify="stringify"></shipping>
+		  	<button title="Select a shipping option" class="button disabled" id="customButton" v-on:click="checkout">Checkout</button>
+		</div>
+	</div>
+  </body>
+</html>
