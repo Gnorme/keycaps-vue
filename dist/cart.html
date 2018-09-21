@@ -1,0 +1,25 @@
+<!DOCTYPE html><html lang=en><head><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1"><link href="https://fonts.googleapis.com/css?family=Open+Sans" rel=stylesheet><script src=https://js.stripe.com/v3/ ></script><script src=https://checkout.stripe.com/checkout.js></script><title>Cart</title><style>body {
+			font-family:'Open Sans', Lato, sans-serif;
+		}
+		.button {
+			background: #1574cd;
+			border-radius: 2px;
+			font-weight:300;
+			color: white;
+			border:none;
+			font-family: 'Open Sans', sans-serif;
+			padding:7px 20px;
+			font-size:16px;
+			box-shadow: 1px 1px 5px rgba(0,0,0,0.3);
+			display:inline-block;
+			cursor: pointer;
+		}
+		#customButton {
+			margin-top:8px;
+			float:right;
+		}
+		.disabled {
+			opacity:0.2;
+			background-color: grey;
+			cursor: not-allowed;
+		}</style><link href=/css/cart.8e23976a.css rel=preload as=style><link href=/js/cart.1670a482.js rel=preload as=script><link href=/js/chunk-vendors.67d4cd61.js rel=preload as=script><link href=/css/cart.8e23976a.css rel=stylesheet></head><body><nav-bar></nav-bar><div id=checkout-container><cart :products=products :remove-item=removeItem></cart><shipping :stringify=stringify></shipping><button title="Select a shipping option" class="button disabled" id=customButton v-on:click=checkout>Checkout</button></div><script src=/js/chunk-vendors.67d4cd61.js></script><script src=/js/cart.1670a482.js></script></body></html>
