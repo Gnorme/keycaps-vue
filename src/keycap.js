@@ -445,12 +445,14 @@ function addInteractive() {
     });
 }
 
-document.body.addEventListener('click', function(e) {
-    var target = e.target;
-    if (target.className){
-    if (target.classList.contains('key-face')) {
-      customKey.changeKey(target.getAttribute('name'))
-    }     
-    }
-    e.stopPropagation()
-}); 
+var selectKey = function (e) {
+  var target = e.target;
+  if (target.className){
+  if (target.classList.contains('key-face')) {
+    customKey.changeKey(target.getAttribute('name'))
+  }     
+  }
+  e.stopPropagation()
+}
+document.body.addEventListener('click', selectKey, false);
+document.body.addEventListener('touch', selectKey, false);

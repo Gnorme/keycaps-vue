@@ -8,7 +8,7 @@
           Compatibility: Fits most Cherry MX keyboards. See our Keycap Compatibility Guide for more information.<br><br>
 
           Instructions
-          <ul style="list-style: none">
+          <ul id="points" style="list-style: none;">
             <li class="info-item">Select the desired key (make sure to chose the correct row)</li>
             <li class="info-item">Select the color you want</li>
             <li class="info-item">Choose an image from your PC that you'd like printed on the keycap</li>
@@ -38,11 +38,7 @@
 	  width:50%;
 	  margin: 0 auto;
 	  padding: 15px 0 15px 50px;
-	} 
-	.info-item {
-	  padding: 10px 5px;
-	  font-size:18px;
-	} 
+	}
 	.info-item:before { 
 	  content:''; 
 	  display:inline-block; 
@@ -53,4 +49,21 @@
 	  background-repeat:no-repeat; 
 	  padding-left: 2em; 
 	} 
+	@media(max-width:1140px) {
+		.info {
+			width:100%;
+			padding: 5px 10px;
+		}
+		.info-item:before {
+			padding-left: 10px;
+		}
+		#points {
+			padding-inline-start: 20px;
+		}
+	} 
+	.info-item {
+	  padding: 10px 5px;
+	  font-size:18px;
+	} 
+
 </style>

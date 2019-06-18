@@ -15,13 +15,13 @@
 				</div>
 			</div>
 			<template v-if="currentView === 'topView'">				
-				<svg width="260" height="210" preserveAspectRatio="xMidYMid meet" :viewBox="selectedKey.sides.topView.viewbox">
+				<svg width="280" height="210" preserveAspectRatio="xMidYMid meet" :viewBox="selectedKey.sides.topView.viewbox">
 					<rect class="keySurface" :x="selectedKey.sides.topView.body.x" :y="selectedKey.sides.topView.body.y" :width="selectedKey.sides.topView.body.width" :height="selectedKey.sides.topView.body.height" :rx="selectedKey.sides.topView.body.rx" :ry="selectedKey.sides.topView.body.ry" :fill="backgroundColor"/>
 					<rect class="restrictRect" :x="selectedKey.sides.topView.face.x" :y="selectedKey.sides.topView.face.y" :width="selectedKey.sides.topView.face.width" :height="selectedKey.sides.topView.face.height" :rx="selectedKey.sides.topView.face.rx" :ry="selectedKey.sides.topView.face.ry" :fill="color" :stroke="strokeColor" stroke-width="1px" />				
 				</svg>
 			</template>					
 			<template v-else>	
-				<svg width="260" height="210" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg" :viewBox="selectedKey.sides.topView.viewbox">
+				<svg width="280" height="210" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg" :viewBox="selectedKey.sides.topView.viewbox">
 					<path stroke-width="1" :stroke="backgroundColor" :fill="color" class="keySurface" :d="selectedKey.sides[currentView].path" vector-effect="non-scaling-stroke"/>
 					<rect class="restrictRect" fill-opacity="0" :height="selectedKey.sides[currentView].restrict.height" stroke-opacity="0" :width="selectedKey.sides[currentView].restrict.width" :x="selectedKey.sides[currentView].restrict.x" :y="selectedKey.sides[currentView].restrict.y"/>
 				</svg>						
@@ -80,7 +80,7 @@
 		display:flex;
 		flex-direction:column;
 		align-items: center;
-		width:260px;
+		width:280px;
 	}	
 	.moveableImg{
 		color: white;
@@ -108,6 +108,7 @@
 	.surface{
 		padding-top:10px;
 		padding-bottom:15px;
+		touch-action:none;
 	}
 	.inputfile {
 		width: 0.1px;
@@ -188,19 +189,21 @@
 		display:inline-flex;
 		flex-flow: row wrap;
 		padding-left:10px;
+		justify-content:space-between;
+		margin:auto;
 	}
 	.colorChoice{
 		border:1px solid #d4d4d4;
-		margin:5px;
+		margin:3px;
 		box-sizing: border-box;
-		height:20px;
-		width:20px;
+		height:27px;
+		width:27px;
 	}
 	.colorChoice:hover {
 		border:1px solid black;
 	}
 	.colorPicker{
-		width:230px;
+		width:260px;
 		padding-bottom:10px;
 	}		
 </style>

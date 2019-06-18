@@ -3,20 +3,47 @@
 	<head>
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width,initial-scale=1.0">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0, maximum-scale=1.0, user-scalable=1">
+		
 		<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 		<title>Custom Keyboard Set</title>
+
 		<style>
 			body {
 				font-family:'Open Sans', Lato, sans-serif;
-			}  		  
+			}  		 
+			@media only screen and (max-device-width: 768px) and (orientation:portrait){
+				body {
+					transform: rotate(90deg);
+					transform-origin: right top;
+					width: 85vh;
+					height:auto;
+					overflow-x:auto;
+					-webkit-overflow-scrolling: touch;
+					position: absolute;
+					top: 100%;
+					right: 0;
+				}
+			}
+			#keyboard {
+				height:100vw;
+				width:100%;
+				overflow-y:scroll;
+				overflow-x:hidden;
+				white-space: nowrap;
+				-webkit-overflow-scrolling: touch;
+			}
 		</style>
+
 	</head>
 	<body>
+		
 		<div id="keyboard">
 			<nav-bar></nav-bar>
 			<keyboard-customizer :change-keyboard='changeKeyboard' :keyboard-options='keyboardOptions' :keyboard='keyboard' :select-color='selectColor' :colors='colors' :undo='undoChange' :redo='redoChange' :set-color-all='setColorAll' :upload='uploadKeyboard'></keyboard-customizer>
 			<keyboard-product-info></keyboard-product-info>
 		</div>
+		
 	</body>
+
 </html>

@@ -53,4 +53,20 @@
 	  background-repeat:no-repeat; 
 	  padding-left: 2em; 
 	} 
+		@media(max-width:1140px) {
+		.info {
+			width:100%;
+			padding: 5px 10px;
+		}
+		.info-item:before {
+			padding-left: 10px;
+		}
+		#points {
+			padding-inline-start: 20px;
+		}
+	} 
+	.info-item {
+	  padding: 10px 5px;
+	  font-size:18px;
+	} 
 </style>

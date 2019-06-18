@@ -131,12 +131,15 @@ var keyboardViewer = new Vue({
 	}	
 })
 
-document.body.addEventListener('click', function(e) {
+var selectKey = function(e) {
     var target = e.target;
     if (target.className){
-		if (target.classList.contains('key-face')) {
+		if (target.classList.contains('key-face') || target.classList.contains('key-body')) {
 			keyboardViewer.setColor(target)
 		}   	
     }
     e.stopPropagation()
-});
+};
+
+document.body.addEventListener('click', selectKey, false);
+document.body.addEventListener('touchstart', selectKey, false);
