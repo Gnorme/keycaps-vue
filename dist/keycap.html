@@ -3,12 +3,25 @@
         }    
       .grid-container {
         display:grid;
-        grid-template-columns: auto auto;
+        grid-template-columns: auto;
         grid-template-rows: 1fr;
         grid-template-areas:
-          "product options";
-        max-width: 1140px;
+          "product"
+          "options";
+        max-width:768px;
         margin-left:auto;
-        margin-right:auto;
         padding: 30px 0;
-      }</style><link href=/css/keycap.8290cd8f.css rel=preload as=style><link href=/js/chunk-vendors.67d4cd61.js rel=preload as=script><link href=/js/keycap.57e0c486.js rel=preload as=script><link href=/css/keycap.8290cd8f.css rel=stylesheet></head><body><noscript><strong>We're sorry but keycaps-vue doesn't work properly without JavaScript enabled. Please enable it to continue.</strong></noscript><div id=app><nav-bar></nav-bar><div id=customKey class=grid-container><key-customizer :main-style=mainStyle :img=surfaces[currentView].img.value :text=surfaces[currentView].text.value :current-view=currentView :transform-text=transformText :transform-img=transformImg :color=selectedColor.color :background-color=shadeBlend(-0.2,selectedColor.color) :stroke-color=shadeBlend(0.065,selectedColor.color) :selected-key=selectedKey :set-color=setColor :colors=colors :on-change=previewImg :filename=surfaces[currentView].img.filename :change-view=changeView :view-options=viewOptions></key-customizer><key-selector :keys=keys :active=active :add-to-cart=addToCart></key-selector></div><keycap-product-info></keycap-product-info></div><canvas id=canvas width=260px height=210px style=display:none></canvas><script src=/js/chunk-vendors.67d4cd61.js></script><script src=/js/keycap.57e0c486.js></script></body></html>
+      }
+      @media(min-width:1024px) {
+        .grid-container {
+          display:grid;
+          grid-template-columns: auto auto;
+          grid-template-rows: 1fr;
+          grid-template-areas:
+            "product options";
+          max-width: 1140px;
+          margin-left:auto;
+          margin-right:auto;
+          padding: 30px 0;
+        }
+      }</style><link href=/css/keycap.c59eceb9.css rel=preload as=style><link href=/js/chunk-vendors.67d4cd61.js rel=preload as=script><link href=/js/keycap.28dc3170.js rel=preload as=script><link href=/css/keycap.c59eceb9.css rel=stylesheet></head><body><noscript><strong>We're sorry but keycaps-vue doesn't work properly without JavaScript enabled. Please enable it to continue.</strong></noscript><div id=app><nav-bar></nav-bar><div id=customKey class=grid-container><key-customizer :main-style=mainStyle :img=surfaces[currentView].img.value :text=surfaces[currentView].text.value :current-view=currentView :transform-text=transformText :transform-img=transformImg :color=selectedColor.color :background-color=shadeBlend(-0.2,selectedColor.color) :stroke-color=shadeBlend(0.065,selectedColor.color) :selected-key=selectedKey :set-color=setColor :colors=colors :on-change=previewImg :filename=surfaces[currentView].img.filename :change-view=changeView :view-options=viewOptions></key-customizer><key-selector :keys=keys :active=active :add-to-cart=addToCart></key-selector></div><keycap-product-info></keycap-product-info></div><canvas id=canvas width=260px height=210px style=display:none></canvas><script src=/js/chunk-vendors.67d4cd61.js></script><script src=/js/keycap.28dc3170.js></script></body></html>
